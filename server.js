@@ -43,8 +43,8 @@ app.post('/api', async (req, res) => {
                     { role: 'system', content: 'Ты встроенный модуль СУБД MS Access. Отвечай на вопросы пользователя мгновенно, четко, коротко, без лишних приветствий и вежливости.' },
                     { role: 'user', content: userMessage }
                 ],
-                max_tokens: 150,
-                temperature: 0.5
+                max_tokens: 1500,
+                temperature: 0.2
             })
         });
 
