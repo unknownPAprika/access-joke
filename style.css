@@ -16,23 +16,23 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Адаптивное окно вывода ответов. Встает строго в белое поле таблиц */
+/* Окно вывода ответов ИИ. Встает строго в белое поле таблиц. ТЕКСТ ВИДИМЫЙ. */
 .output-window {
     position: absolute;
     top: 15%;      
     left: 21%;     
     width: 78%;    
     height: 82%;   
-    background-color: #ffffff; 
+    background-color: #ffffff; /* Полностью белый фон */
     padding: 20px;
     overflow-y: auto;
     white-space: pre-wrap;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
-    color: #000000 !important;
+    color: #000000 !important; /* Текст ИИ гарантированно ЧЕРНЫЙ и ВИДИМЫЙ */
     z-index: 100;  
     display: none; /* Скрыто при первой загрузке, чтобы не портить картинку */
-    border: 1px solid #d9d9d9;
+    border: none;  /* Убрали серую рамку для бесшовного слияния со скриншотом */
 }
 
 /* Контейнер для полей ввода (привязан к левому нижнему углу) */
@@ -46,27 +46,27 @@ body {
     z-index: 99999;
 }
 
-/* ВРЕМЕННО ПОДCВЕЧЕННОЕ ПОЛЕ ДЛЯ ТЕСТА (потом сотрем рамку и фон) */
+/* ПОЛНОСТЬЮ НЕВИДИМОЕ ПОЛЕ ВВОДА (Текст при вводе скрыт) */
 #prompt-input {
     width: 200px;
     height: 22px;
-    background-color: rgba(255, 0, 0, 0.15) !important; 
-    border: 1px solid red !important;
+    background-color: transparent !important; /* Убрали красный фон */
+    border: none !important;                  /* Убрали красную рамку */
     outline: none;
-    color: #000000 !important; 
+    color: transparent !important;             /* Буквы при вводе невидимы, чтобы друг ничего не заметил */
     font-size: 11px;
     font-weight: bold;
     padding: 2px 5px;
 }
 
-/* ВРЕМЕННО ПОДСВЕЧЕННАЯ КНОПКА ДЛЯ ТЕСТА */
+/* ПОЛНОСТЬЮ НЕВИДИМАЯ КНОПКА ЗАПРОСА */
 #send-query-btn {
     height: 22px;
-    background-color: rgba(0, 0, 255, 0.2) !important;
-    border: 1px solid blue !important;
-    color: #000000;
+    background-color: transparent !important; /* Убрали синий фон */
+    border: none !important;                  /* Убрали синюю рамку */
+    color: transparent !important;            /* Убрали надпись Запрос */
     font-size: 10px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: default;                          /* Обычный курсор вместо указательного пальца */
     padding: 0 8px;
 }
