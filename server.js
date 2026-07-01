@@ -7,12 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 // Принудительно раздаем статические файлы из текущей папки
-app.use(express.static(path.join(__dirname)));
+// Замените строки app.use(express.static...) и app.get('/', ...) на этот блок:
+app.use(express.static(__dirname));
 
-// Явно указываем серверу открывать index.html на главной странице
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(__dirname + '/index.html');
 });
+
 
 // Наш эндпоинт для связи с нейросетью
 app.post('/api', async (req, res) => {
