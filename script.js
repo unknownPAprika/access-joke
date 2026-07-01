@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const prompt = promptInput.value.trim();
         if (!prompt) return;
 
-        // Визуальный статус загрузки внутри "белого листа" программы
+        // Делаем белое окно видимым и пишем системный статус
+        outputField.style.display = "block";
         outputField.innerText = "Выполнение SQL-запроса к локальной базе данных... Пожалуйста, подождите.";
         promptInput.value = '';
 
@@ -34,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Отправка по клику на кнопку
     sendBtn.addEventListener('click', sendToAI);
+
+    // Отправка по нажатию Enter в поле ввода
     promptInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             sendToAI();
