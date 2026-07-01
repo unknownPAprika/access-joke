@@ -3,81 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Database11 : база данных- C:\Users\pc\OneDrive\Documents\Database11.accdb (Формат файлов Access 2007-2016) - Access</title>
+    <title>Database11 : база данных - Access</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Шапка программы -->
-    <header class="access-header">
-        <div class="top-bar">
-            <div class="quick-access">
-                <span class="icon save-icon">💾</span>
-                <span class="icon undo-icon">↩️</span>
-                <span class="icon redo-icon">↪️</span>
-            </div>
-            <div class="window-title">Database11 : база данных - Access</div>
-            <div class="window-controls">
-                <span>➖</span><span>🗖</span><span class="close-btn">❌</span>
-            </div>
-        </div>
-        
-        <!-- Лента (Ribbon) -->
-        <nav class="ribbon-tabs">
-            <div class="tab active">Файл</div>
-            <div class="tab active-ribbon">Главная</div>
-            <div class="tab">Создание</div>
-            <div class="tab">Внешние данные</div>
-            <div class="tab">Работа с базами данных</div>
-            <div class="tab">Справка</div>
-        </nav>
-        
-        <!-- Панель инструментов (верхний ряд кнопок) -->
-        <div class="toolbar">
-            <div class="tool-group">
-                <button class="btn" id="btn-view">
-                    <span class="btn-icon">📐</span>
-                    <span class="btn-text">Режим</span>
-                </button>
-            </div>
-            <div class="tool-group">
-                <button class="btn" id="btn-cut">✂️ Вырезать</button>
-                <button class="btn" id="btn-copy">📋 Копировать</button>
-            </div>
-            <div class="tool-group">
-                <button class="btn" id="btn-filter">⏳ Фильтр</button>
-                <button class="btn" id="btn-sort">🔽 Сортировка</button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Основная рабочая область -->
-    <main class="workspace">
-        <!-- Боковая панель объектов -->
-        <aside class="sidebar">
-            <div class="sidebar-header">Все объекты Access ⚙️</div>
-            <ul class="object-list">
-                <li>📊 Заказы</li>
-                <li>👥 Клиенты</li>
-                <li>📝 Строки_заказов</li>
-                <li class="selected">📦 Товары</li>
-            </ul>
-        </aside>
+    <!-- Главная рабочая область ИИ, замаскированная под таблицу -->
+    <div class="output-window" id="output-field">
+        <!-- Сюда ИИ будет выводить ответы. По умолчанию здесь пусто, чтобы не портить скриншот -->
+    </div>
 
-        <!-- Рабочий стол / Консоль ИИ -->
-        <section class="content-area">
-            <div class="table-tab">📦 Товары: Таблица</div>
-            <div class="ai-container">
-                <div class="output-window" id="output-field">
-                    Access готов к работе. Используйте поле ниже для выполнения "запросов к БД".
-                </div>
-                <div class="input-bar">
-                    <input type="text" id="prompt-input" placeholder="Введите SQL-запрос или промт для нейросети...">
-                    <button id="send-query-btn">Выполнить</button>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Невидимая панель управления в статус-баре -->
+    <div class="hidden-controls">
+        <input type="text" id="prompt-input" placeholder="">
+        <button id="send-query-btn"></button>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
