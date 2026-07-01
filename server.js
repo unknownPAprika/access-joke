@@ -1,16 +1,24 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path'); // Добавляем модуль для точной работы с путями
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname)); // Раздает index.html, style.css и script.js
 
+// Принудительно раздаем статические файлы из текущей папки
+app.use(express.static(path.join(__dirname)));
+
+// Явно указываем серверу открывать index.html на главной странице
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Наш эндпоинт для связи с нейросетью
 app.post('/api', async (req, res) => {
     const userMessage = req.body.message;
     if (!userMessage) return res.status(400).json({ text: "Пустой запрос" });
 
-    // Берем ключ из безопасных переменных среды Render
     const apiKey = process.env.MISTRAL_API_KEY; 
 
     try {
