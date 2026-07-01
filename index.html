@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Database11 : база данных - Access</title>
+    <!-- Заглушка, которая убирает ошибку 404 с favicon.ico -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Главная рабочая область ИИ, замаскированная под таблицу -->
-    <div class="output-window" id="output-field">
-        <!-- Сюда ИИ будет выводить ответы. По умолчанию здесь пусто, чтобы не портить скриншот -->
-    </div>
+    <!-- Главная рабочая область СУБД, куда нейросеть выводит ответы -->
+    <div class="output-window" id="output-field"></div>
 
-    <!-- Невидимая панель управления в статус-баре -->
+    <!-- Панель управления ИИ в левом нижнем углу (поверх надписи Готово) -->
     <div class="hidden-controls">
-        <input type="text" id="prompt-input" placeholder="">
-        <button id="send-query-btn"></button>
+        <input type="text" id="prompt-input" placeholder="Введите промт...">
+        <button id="send-query-btn">Запрос</button>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
