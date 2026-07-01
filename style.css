@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+/* Бордовая тема Access */
+.access-header {
+    background-color: #a30000;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    background-color: #800000;
+}
+
+.ribbon-tabs {
+    display: flex;
+    background-color: #a30000;
+    padding-left: 10px;
+}
+
+.tab {
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #ffd2d2;
+}
+
+.tab.active-ribbon {
+    background-color: #f3f3f3;
+    color: #a30000;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Панель инструментов */
+.toolbar {
+    background-color: #f3f3f3;
+    color: #333;
+    display: flex;
+    padding: 6px;
+    border-bottom: 1px solid #d9d9d9;
+    gap: 10px;
+}
+
+.tool-group {
+    display: flex;
+    gap: 4px;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #e5e5e5;
+    border-color: #bcccdc;
+}
+
+/* Рабочее пространство */
+.workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fdfdfd;
+    border-right: 1px solid #d9d9d9;
+    padding: 10px;
+}
+
+.sidebar-header {
+    font-weight: bold;
+    color: #a30000;
+    margin-bottom: 10px;
+}
+
+.object-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.object-list li {
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.object-list li.selected, .object-list li:hover {
+    background-color: #edd3d3;
+    color: #a30000;
+}
+
+/* Окно вывода ИИ маскированное под СУБД */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.table-tab {
+    background-color: #fff;
+    padding: 6px 12px;
+    border-bottom: 1px solid #d9d9d9;
+    width: fit-content;
+    border-top: 2px solid #a30000;
+    font-weight: bold;
+}
+
+.ai-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.output-window {
+    flex: 1;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    padding: 15px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.input-bar {
+    display: flex;
+    gap: 10px;
+}
+
+#prompt-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #a30000;
+    border-radius: 4px;
+}
+
+#send-query-btn {
+    background-color: #a30000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#send-query-btn:hover {
+    background-color: #800000;
+}
